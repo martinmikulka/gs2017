@@ -1,0 +1,90 @@
+﻿html {
+    body {
+        background-color: #fff;
+        margin: 0;
+        padding: 100px 0;
+    }
+
+    #Carousel {
+        height: 400px;
+        position: relative;
+
+        .items-container {
+            .item {
+                display: none;
+                position: absolute;
+                transition: all 1s;
+                height: 100%;
+
+                &.prev-out {
+                    display: block;
+                    left: -20%;
+                    opacity: 0;
+                    width: 20%;
+                    z-index: 1;
+                }
+
+                &.prev-1 {
+                    background-color: #ff0000;
+                    display: block;
+                    left: 0;
+                    opacity: 0.4;
+                    width: 25%;
+                    z-index: 3;
+                }
+
+                &.current {
+                    background-color: #ff6a00;
+                    display: block;
+                    left: 25%;
+                    opacity: 1;
+                    width: 30%;
+                    z-index: 4;
+                }
+
+                &.next-1 {
+                    background-color: #ffd800;
+                    display: block;
+                    left: 55%;
+                    opacity: 0.7;
+                    width: 25%;
+                    z-index: 3;
+                }
+
+                &.next-2 {
+                    background-color: #4cff00;
+                    display: block;
+                    left: 80%;
+                    opacity: 0.4;
+                    width: 20%;
+                    z-index: 2;
+                }
+
+                &.next-out {
+                    display: block;
+                    left: 100%;
+                    opacity: 0;
+                    width: 20%;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .controls-container {
+            .control {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
+            }
+
+            [data-id="NextBtn"] {
+                right: 0;
+            }
+
+            [data-id="PrevBtn"] {
+                left: 0;
+            }
+        }
+    }
+}
